@@ -1,0 +1,25 @@
+name: cpo-training
+desc: CPO (ALMA-R style) on top of SFT — LoRA r=64, 1 epoch, lr=5e-6, beta=0.1
+cmd: python3 train_cpo_from_sft.py
+  --model tencent/Hy-MT2-7B
+  --sft-lora ${SFT}
+  --data ${DATA}
+  --output ${OUTPUT}
+  --epochs 1
+  --lr 5e-6
+  --beta 0.1
+  --lora-r 64
+  --lora-alpha 128
+  --trust-remote-code
+env:
+  python:
+    type: manual
+    version: 3.10
+    requirements-file: requirements.txt
+inputs:
+  - dpo_train_pool.json: DATA
+  - sft_lora: SFT
+outputs:
+  - cpo_lora: OUTPUT
+cloud-instance-types:
+  - g2.1
