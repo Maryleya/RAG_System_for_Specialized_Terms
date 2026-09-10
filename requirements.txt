@@ -1,0 +1,31 @@
+# Core ML stack
+torch>=2.1.0
+transformers>=4.44.0
+accelerate>=0.30.0
+peft>=0.11.0
+trl>=0.9.0
+bitsandbytes>=0.43.0
+datasets>=2.19.0
+huggingface_hub>=0.23.0
+
+# Inference / retrieval
+sentence-transformers>=2.7.0
+scikit-learn>=1.3.0
+numpy>=1.24.0
+pandas>=2.0.0
+tqdm>=4.66.0
+
+# Russian morphology (for TSR stage 1)
+pymorphy3>=2.0.2
+pymorphy3-dicts-ru>=2.4.0
+
+# MT metrics
+sacrebleu>=2.4.0
+unbabel-comet>=2.2.0
+
+# MetricX (Google) — install from source per official instructions
+# https://github.com/google-research/metricx
+
+# Utilities
+pyyaml>=6.0
+python-Levenshtein>=0.25.0

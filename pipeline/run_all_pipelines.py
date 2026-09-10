@@ -17,7 +17,7 @@ def parse_args():
     p.add_argument('--tag', required=True)
     p.add_argument('--name', required=True)
     p.add_argument('--type', required=True, choices=['causal', 'gemma3'])
-    p.add_argument('--final-dir', default='/home/user/repos/mar/rag_term')
+    p.add_argument('--final-dir', default='./results')
     p.add_argument('--skip', nargs='*', default=[])
     p.add_argument('--token', default=None)
     p.add_argument('--device', default='auto')

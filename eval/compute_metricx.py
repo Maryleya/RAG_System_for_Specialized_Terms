@@ -12,7 +12,7 @@ if _METRICX_REPO.exists():
     sys.path.insert(0, str(_METRICX_REPO))
 
 HF_TOKEN = ''
-DEFAULT_BASE = Path('/home/user/repos/mar/rag_term/final/results')
+DEFAULT_BASE = Path('./results')
 
 EXPS_LOCAL = ['baseline', 'term_substitution', 'rag_auto', 'rag_clf', 'rag_oracle']
 EXPS_TUNED = EXPS_LOCAL + ['rag_clf_sft', 'rag_clf_sft_cpo']

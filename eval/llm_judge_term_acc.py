@@ -198,7 +198,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--pipelines', nargs='+', default=[])
     ap.add_argument('--csv-files', nargs='+', default=[])
-    ap.add_argument('--base-dir', default='/home/user/repos/mar/rag_term/final/results')
+    ap.add_argument('--base-dir', default='./results')
     ap.add_argument('--out-dir', default=None)
     args = ap.parse_args()
 
