@@ -105,10 +105,10 @@ Fine-tuned LoRA adapters are on the Hugging Face Hub:
 
 | Base model | Configuration | Checkpoint |
 |------------|---------------|------------|
-| `tencent/Hy-MT2-7B`          | SFT + CPO | [`WMT26Anon/hymt2-7b-sft-cpo`](https://huggingface.co/WMT26Anon/hymt2-7b-sft-cpo) |
-| `tencent/Hy-MT2-7B`          | SFT only  | [`WMT26Anon/hymt2-7b-sft`](https://huggingface.co/WMT26Anon/hymt2-7b-sft) |
-| `Qwen/Qwen3-4B-Instruct-2507` | SFT + CPO | [`WMT26Anon/qwen3-4b-sft-cpo`](https://huggingface.co/WMT26Anon/qwen3-4b-sft-cpo) |
-| `Qwen/Qwen3-4B-Instruct-2507` | SFT only  | [`WMT26Anon/qwen3-4b-sft`](https://huggingface.co/WMT26Anon/qwen3-4b-sft) |
+| `tencent/Hy-MT2-7B`          | SFT + CPO | [`maryleya/hymt2-7b-sft-cpo`](https://huggingface.co/maryleya/hymt2-7b-sft-cpo) |
+| `tencent/Hy-MT2-7B`          | SFT only  | [`maryleya/hymt2-7b-sft`](https://huggingface.co/maryleya/hymt2-7b-sft) |
+| `Qwen/Qwen3-4B-Instruct-2507` | SFT + CPO | [`maryleya/qwen3-4b-sft-cpo`](https://huggingface.co/maryleya/qwen3-4b-sft-cpo) |
+| `Qwen/Qwen3-4B-Instruct-2507` | SFT only  | [`maryleya/qwen3-4b-sft`](https://huggingface.co/maryleya/qwen3-4b-sft) |
 
 Load through PEFT on top of the corresponding base model:
 
@@ -118,7 +118,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 
 base = AutoModelForCausalLM.from_pretrained(
     'tencent/Hy-MT2-7B', trust_remote_code=True)
-model = PeftModel.from_pretrained(base, 'WMT26Anon/hymt2-7b-sft-cpo')
+model = PeftModel.from_pretrained(base, 'maryleya/hymt2-7b-sft-cpo')
 tok = AutoTokenizer.from_pretrained(
     'tencent/Hy-MT2-7B', trust_remote_code=True)
 ```
